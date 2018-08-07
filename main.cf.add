@@ -1,0 +1,11 @@
+disable_vrfy_command = yes
+smtpd_helo_required = yes
+
+smtpd_client_restrictions = reject_rbl_client all.rbl.jp, reject_rbl_client zen.spamhaus.org
+smtpd_sender_restrictions = reject_unknown_sender_domain, reject_non_fqdn_sender 
+
+virtual_mailbox_domains = regexp:/etc/postfix/virtual_mailbox_maps
+virtual_transport = mbh
+mbh_destination_recipient_limit = 1
+mbh_time_limit = 60
+inet_interfaces = all

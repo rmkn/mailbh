@@ -1,0 +1,2 @@
+mbh  unix  -       n       n       -       -       pipe
+  user=mbh argv=/tmp/mbh.php ${recipient} ${sender}
